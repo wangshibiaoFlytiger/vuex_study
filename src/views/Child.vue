@@ -8,20 +8,20 @@
 </template>
 
 <script>
-    import store from '../store/index'
+
     export default {
         name: "Child",
         computed:{
             msg(){
-                return store.state.module1.childText;
+                return this.store.state.module1.childText;
             }
         },
         methods: {
             clickHandler(){
-                store.commit("changeTestMsg", "子组件修改父组件后的文本");
+                this.store.commit("changeTestMsg", "子组件修改父组件后的文本");
             },
             clickHandler2(){
-                store.commit("changeChildText", "子组件修改自己后的文本");
+                this.store.commit("changeChildText", "子组件修改自己后的文本");
             }
         }
     }
