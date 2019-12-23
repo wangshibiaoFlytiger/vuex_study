@@ -29,8 +29,7 @@
         },
         components:{
             'child': Child
-        },
-        store,
+        }
     }
 </script>
 

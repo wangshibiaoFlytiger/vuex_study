@@ -23,8 +23,7 @@
             clickHandler2(){
                 store.commit("changeChildText", "子组件修改自己后的文本");
             }
-        },
-        store
+        }
     }
 </script>
 
