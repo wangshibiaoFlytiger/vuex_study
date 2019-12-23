@@ -8,12 +8,12 @@
 </template>
 
 <script>
-    import store from '../vuex'
+    import store from '../store/index'
     export default {
         name: "Child",
         computed:{
             msg(){
-                return store.state.childText;
+                return store.state.module1.childText;
             }
         },
         methods: {

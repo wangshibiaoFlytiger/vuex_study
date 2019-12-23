@@ -9,22 +9,22 @@
 </template>
 
 <script>
-    import store from '../vuex'
+    import store from '../store/index'
     import Child from './Child.vue'
 
     export default {
         name: "Parent",
         computed: {
             msg(){
-                return store.state.testMsg;
+                return store.state.module1.testMsg;
             }
         },
         methods:{
             clickHandler(){
-                store.commit('changeTestMsg', '父组件修改自己后的文本')
+                store.commit('changeTestMsg', '父组件修改自己后的文本a')
             },
             clickHandler2(){
-                store.commit('changeChildText', '父组件修改子组件后的文本')
+                store.commit('changeChildText', '父组件修改子组件后的文本a')
             }
         },
         components:{
