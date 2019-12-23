@@ -1,29 +1,5 @@
-# vuex_study
+项目原始仓库地址: https://github.com/wangshibiaoFlytiger/vuex_study
+#若本项目给您带来收获, 还请您动动小拇指,右上角给点个赞哈!!!
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+本项目用于演示vue的状态管理插件vuex的用法, 代码简单易懂. 堪称helloworld级别. 
+支持分模块状态管理. 适用于大型项目的vuex结构.
