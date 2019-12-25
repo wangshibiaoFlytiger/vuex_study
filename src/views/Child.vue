@@ -9,20 +9,29 @@
 
 <script>
     import {CHANGE_CHILD_TEXT, CHANGE_TEST_MSG} from "../store/mutation-types";
+    import {mapMutations, mapState} from "vuex";
+    import store from "../store/index";
 
     export default {
         name: "Child",
+        // 需要将store定义到当前组件, 否则当前组件无法读取state状态
+        store,
         computed:{
-            msg(){
-                return this.store.state.module1.childText;
-            }
+            ...mapState({
+                msg: state => state.module1.childText
+            }),
         },
         methods: {
+            ...mapMutations({
+                changeTestMsg: CHANGE_TEST_MSG,
+                changeChildText: CHANGE_CHILD_TEXT
+            }),
+
             clickHandler(){
-                this.store.commit(CHANGE_TEST_MSG, "子组件修改父组件后的文本");
+                this.changeTestMsg("子组件修改父组件后的文本")
             },
             clickHandler2(){
-                this.store.commit(CHANGE_CHILD_TEXT, "子组件修改自己后的文本");
+                this.changeChildText("子组件修改自己后的文本")
             }
         }
     }
