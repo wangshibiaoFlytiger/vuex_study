@@ -25,10 +25,14 @@
             }),
 
             clickHandler(){
-                this.changeTestMsg("子组件修改父组件后的文本")
+                this.changeTestMsg({
+                    content: "子组件修改父组件后的文本"
+                })
             },
             clickHandler2(){
-                this.changeChildText("子组件修改自己后的文本")
+                this.changeChildText({
+                    content: "子组件修改自己后的文本"
+                })
             }
         }
     }

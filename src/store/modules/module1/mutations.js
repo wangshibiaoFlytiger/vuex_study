@@ -4,18 +4,18 @@ export default {
     /**
      * 修改父组件的内容
      * @param state
-     * @param str
+     * @param payload
      */
-    [CHANGE_TEST_MSG](state, str){
-        state.testMsg = str;
+    [CHANGE_TEST_MSG](state, payload){
+        state.testMsg = payload.content;
     },
 
     /**
      * 修改子组件的内容
      * @param state
-     * @param str
+     * @param payload
      */
-    [CHANGE_CHILD_TEXT](state, str){
-        state.childText = str;
+    [CHANGE_CHILD_TEXT](state, payload){
+        state.childText = payload.content;
     }
 };

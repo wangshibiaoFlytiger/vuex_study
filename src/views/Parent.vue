@@ -31,10 +31,14 @@
             ]),
 
             clickHandler(){
-                this.changeTestMsg('父组件修改自己后的文本');
+                this.changeTestMsg({
+                    content: '父组件修改自己后的文本'
+                });
             },
             clickHandler2(){
-                this.changeChildText('父组件修改子组件后的文本');
+                this.changeChildText({
+                    content: '父组件修改子组件后的文本'
+                });
             }
         },
         components:{
