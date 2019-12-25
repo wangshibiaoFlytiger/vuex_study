@@ -8,6 +8,7 @@
 </template>
 
 <script>
+    import {CHANGE_CHILD_TEXT, CHANGE_TEST_MSG} from "../store/mutation-types";
 
     export default {
         name: "Child",
@@ -18,10 +19,10 @@
         },
         methods: {
             clickHandler(){
-                this.store.commit("changeTestMsg", "子组件修改父组件后的文本");
+                this.store.commit(CHANGE_TEST_MSG, "子组件修改父组件后的文本");
             },
             clickHandler2(){
-                this.store.commit("changeChildText", "子组件修改自己后的文本");
+                this.store.commit(CHANGE_CHILD_TEXT, "子组件修改自己后的文本");
             }
         }
     }

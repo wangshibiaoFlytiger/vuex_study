@@ -10,6 +10,7 @@
 
 <script>
     import Child from './Child.vue'
+    import {CHANGE_CHILD_TEXT, CHANGE_TEST_MSG} from "../store/mutation-types";
 
     export default {
         name: "Parent",
@@ -20,10 +21,10 @@
         },
         methods:{
             clickHandler(){
-                this.store.commit('changeTestMsg', '父组件修改自己后的文本a')
+                this.store.commit(CHANGE_TEST_MSG, '父组件修改自己后的文本a')
             },
             clickHandler2(){
-                this.store.commit('changeChildText', '父组件修改子组件后的文本a')
+                this.store.commit(CHANGE_CHILD_TEXT, '父组件修改子组件后的文本a')
             }
         },
         components:{
