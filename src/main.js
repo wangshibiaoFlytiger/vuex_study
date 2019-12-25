@@ -8,5 +8,7 @@ Vue.prototype.store = store
 Vue.config.productionTip = false
 
 new Vue({
+  // 将store定义为vue实例的选项, 则所有组件会全局自动注入该选项
+  store,
   render: h => h(App),
 }).$mount('#app')

@@ -12,12 +12,9 @@
     import Child from './Child.vue'
     import {CHANGE_CHILD_TEXT, CHANGE_TEST_MSG} from "../store/mutation-types";
     import {mapMutations, mapState} from "vuex";
-    import store from "../store/index";
 
     export default {
         name: "Parent",
-        // 需要将store定义到当前组件, 否则当前组件无法读取state状态
-        store,
         computed: {
             ...mapState({
                 msg: state => state.module1.testMsg
